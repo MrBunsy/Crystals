@@ -5,7 +5,7 @@ var Crystals = function (div) {
     this.height = parseInt(this.div.style.height);
     this.pos = new Vector(this.div.offsetLeft, this.div.offsetTop);
     this.particles = [];
-
+    
 
     this.canvas = document.createElement("canvas");
 //    this.canvases[i].style.position = "absolute";
@@ -50,7 +50,8 @@ var Crystals = function (div) {
 
     this.update = function () {
         //main loop
-        this.draw(new Vector(0, 0), 10);
+        pixelsPerMetre = 10;
+        this.draw(new Vector(-this.width*0.5/pixelsPerMetre,-this.height*0.5/pixelsPerMetre), pixelsPerMetre);
     };
 
     this.randomPosition = function () {
